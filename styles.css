@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --color-purple: #682363;
+    --color-black-opacity-100: #000;
+    --color-black-opacity-75: #0a0a0a;
+    --backround-color: #fcfcff;
+
+    --h1: 40px;
+    --h2: 32px;
+    --h3: 28px;
+    --h4: 24px;
+    --h5: 20px;
+    --h6: 16px;
+
+    --font1: "Oswald", sans-serif;
+    --font2: "Noto Serif", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+@media only screen and (max-width: 600px) {
+    body {
+        display: grid;
+        text-align: center;
+        font-family: var(--font1);
+        color: var(--color-black-opacity-100);
+        background-color: var(--backround-color);
+    }
+
+    .grid-container {
+        display: grid;
+
+    }
+}
+
+
+
+  /* ------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------ */
+  @media only screen and (min-width: 601px) {
+
+}
+
+
+  
+  /* ------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------ */
+  @media only screen and (min-width: 768px) {
+
+}
+ 
+  /* ------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------ */
+  @media only screen and (min-width: 992px) {
+
+  }
+
+    /* ------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------ */
+  @media only screen and (min-width: 1200px) {
+
+  }
