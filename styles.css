@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
 :root {
+    --color-lightgrey: #bebebe;
     --color-purple: #682363;
-    --color-black-opacity-100: #000;
-    --color-black-opacity-75: #0a0a0a;
-    --backround-color: #fcfcff;
+    --color-black-opacity-100: rgba(0, 0, 0, 1);
+    --color-black-opacity-75: rgba(10, 10, 10, 0.75);
+    --font-color: #fcfcff;
+  
+
+    --hero-background-image: url(/pics/miia-arkko-junior-software-developer-background-3.jpg);
+    --background-abstract-image: url(/pics/abstract-background.jpg);
 
     --h1: 40px;
     --h2: 32px;
@@ -15,54 +20,241 @@
 
     --font1: "Oswald", sans-serif;
     --font2: "Noto Serif", serif;
-}
+} 
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    color: var(--font-color);
 }
 
-/* ------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------ */
-@media only screen and (max-width: 600px) {
-    body {
-        display: grid;
-        text-align: center;
-        font-family: var(--font1);
-        color: var(--color-black-opacity-100);
-        background-color: var(--backround-color);
-    }
-
-    .grid-container {
-        display: grid;
-
-    }
+html {
+  height: 100%;
 }
 
-
-
-  /* ------------------------------------------------------------------------ */
-  /* ------------------------------------------------------------------------ */
-  @media only screen and (min-width: 601px) {
+body {
+  height: 100vh;
+  display: grid;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  background-color: black;
+  background-image: var(--background-abstract-image);
+  background-position: center;
+  background-size: cover;
 
 }
 
+.grid-container {
+  display: grid;
+}
 
-  
-  /* ------------------------------------------------------------------------ */
-  /* ------------------------------------------------------------------------ */
-  @media only screen and (min-width: 768px) {
+.navbar {
+width: 100%;
+height: 60px;
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.navbar .logo a {
+font-size: 1.5rem;
+font-weight: bold;
+color: var(--font-color);
+}
+.navbar .links {
+display: flex;
+gap: 2rem;
+}
+
+.navbar .toggle_btn {
+color: var(--font-color);
+font-size: 1.5rem;
+cursor: pointer;
+display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+text-decoration: none;
+font-size: 1rem;
+color:var(--font-color);
+font-size: 1rem;
+}
+
+a:hover {
+color: var(--color-purple);
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.dropdown_menu {
+  display: none;
+  position:absolute;
+  right: 2rem;
+  top: 60px;
+  width: 300px;
+  height: 0;
+  background-color: var(--color-black-opacity-75);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 240px;
+  z-index: 3;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-background-image {
+  background-image: var(--hero-background-image); /* Käytä muuttujaa taustakuvan asettamiseen */
+  background-position: center top;
+  background-size: cover;
+  width: 100%; /* Aseta leveys täydeksi elementin leveyden mukaan */
+  height: 100%; /* Aseta korkeus täydeksi elementin korkeuden mukaan */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Aseta taustakuvan z-indeksi pienemmäksi kuin section#hero:n z-indeksi */
+}
+
+
+section#hero {
+  background-color: var(--color-black-opacity-100); /* Fallback color */
+  background-color: var(--color-black-opacity-75); /* Black w/opacity/see-through */
+  font-weight: bold;
+  border: 2px solid var(--font-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 60%;
+  height: 70%;
+  padding: 3rem 0 4rem 2rem;
+  text-align: left; 
+}
+
+#hero h1 {
+  font-size: var(--h1);
+  margin-bottom: 1rem;
+}
+
+#hero h5 {
+  font-size: var(--h5);
+  max-width: 55%;
+  text-wrap: wrap;
+}
+
+
+@media (max-width: 1500px) {
+  section#hero {
+    height: 60%;
+    width: 80%;
+  }
+  #hero .hero-background-image {
+    background-position: center top;
+  }
 
 }
+
+
+@media (max-width: 1200px) {
+  section#hero {
+    width: 80%;
+    height: 50%;
+  }
+
+  #hero .hero-background-image {
+    background-position: left top;
+  }
+}
+
  
   /* ------------------------------------------------------------------------ */
   /* ------------------------------------------------------------------------ */
-  @media only screen and (min-width: 992px) {
+  @media  (max-width: 992px) {
+    .navbar .links {
+      display: none;
+    }
 
+    .navbar .toggle_btn {
+      display: block;
+
+    }
+
+    .dropdown_menu {
+      display: block;
+    }
+
+    section#hero {
+      width: 80%;
+      height: 40%;
+      text-align: left;
+    }
+
+    #hero h5 {
+      max-width: 50%;
+      text-wrap: wrap;
+    }
+
+    .hero-background-image {
+      background-position: center top;
+  }
+    
   }
 
-    /* ------------------------------------------------------------------------ */
-  /* ------------------------------------------------------------------------ */
-  @media only screen and (min-width: 1200px) {
+  /*  */
+  @media (max-width: 799px) {
+    #hero h1 {
+      max-width: 50%;
+    }
 
+    .hero-background-image {
+      background-position: right top;
   }
+
+    section#hero {
+      height: 50%;
+    }
+  }
+
+
+  @media (max-width: 576px) {
+    .dropdown_menu {
+      left: 2rem;
+      width: unset;
+    }
+
+    section#hero {
+      width: 96%;
+      height: auto;
+      text-align: center;
+    }
+
+    .hero-background-image {
+      background-position: left center;
+  }
+  }
+
+
+
+  
