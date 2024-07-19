@@ -32,7 +32,7 @@
 }
 
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -233,32 +233,17 @@ header {
   }
 
   .hero-background-image {
-    display: none;
+    background-position: right 5% top;
   }
 
   #hero {
-    display: none;
-  }
-
-  #hero-mobile {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #682363;
-    align-items: center;
+    height: auto;
+    position: relative;
   }
 
   .hero-content {
     width: 100%;
-  }
-
-  .hero-image-mobile {
-    background-image: var(--hero-background-image);
-    border: 2px solid var(--font-color);
-    height: 300px;
-    width: 80%;
-    background-position: right 5% top;
-    background-size: cover;
   }
 
   #hero h1 {
@@ -273,14 +258,5 @@ header {
   .dropdown_menu {
     left: 2rem;
     width: unset;
-  }
-
-  #hero-mobile {
-    width: 95%;
-  }
-
-  .hero-image-mobile {
-    width: 100%;
-    background-position: right 20% top;
   }
 }
