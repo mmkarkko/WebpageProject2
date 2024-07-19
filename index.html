@@ -1,63 +1,78 @@
 <!DOCTYPE html>
 <html lang="fi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My CV</title>
-  <link rel="icon" type="image/x-icon" href="/Pics/cvfavicon.ico">
-  <script src="https://kit.fontawesome.com/50ff8fbf1d.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-    <div class="navbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CV</title>
+    <link rel="icon" type="image/x-icon" href="/Pics/cvfavicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/50ff8fbf1d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
         <div class="logo"><a href="#">Miia Arkko</a></div>
         <ul class="links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="toggle_btn">
-            <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars"></i>
         </div>
-    </div>
+      </div>
 
-    <div class="dropdown_menu">
+      <div class="dropdown_menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main>
-    <section id="hero">
+    <main>
+      <section id="hero" class="desktop-hero">
         <div class="hero-background-image"></div>
         <h1>Code, Design, Secure:</h1>
-        <h3 id="subheader">A graduate's path to full-stack mastery -<br />
-            Exploring the spectrum from Front to Back with security in mind.</h3>
-    </section>
+        <h3 id="hero-subheader">
+          A graduate's path to full-stack mastery -<br />
+          Exploring the spectrum from Front to Back with security in mind.
+        </h3>
+      </section>
 
-</main>
+      <div id="hero-mobile" class="mobile-hero">
+        <div class="hero-image-mobile"></div>
+        <div class="hero-content">
+          <h1>Code, Design, Secure:</h1>
+          <h3 id="mobile-subheader">
+            A graduate's path to full-stack mastery -<br />
+            Exploring the spectrum from Front to Back with security in mind.
+          </h3>
+        </div>
+      </div>
+    </main>
 
-<script>
-    const toggleBtn = document.querySelector('.toggle_btn')
-    const toggleBtnIcon = document.querySelector('.toggle_btn i')
-    const dropDownMenu = document.querySelector('.dropdown_menu')
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
 
-    toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open')
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
 
-        toggleBtnIcon.classList = isOpen 
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars'
-    }
-</script>
-</body>
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
 </html>

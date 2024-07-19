@@ -1,33 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
 
 :root {
-    --color-lightgrey: #bebebe;
-    --color-purple: #682363;
-    --color-black-opacity-100: rgba(0, 0, 0, 1);
-    --color-black-opacity-75: rgba(10, 10, 10, 0.75);
-    --font-color: #fcfcff;
-  
+  --color-lightgrey: #bebebe;
+  --color-purple: #682363;
+  --color-black-opacity-100: rgba(0, 0, 0, 1);
+  --color-black-opacity-75: rgba(10, 10, 10, 0.75);
+  --font-color: #fcfcff;
 
-    --hero-background-image: url(/pics/miia-arkko-junior-software-developer-background-3.jpg);
-    --background-abstract-image: url(/pics/abstract-background.jpg);
+  --hero-background-image: url(/pics/miia-arkko-junior-software-developer-background-3.jpg);
+  --background-abstract-image: url(/pics/abstract-background.jpg);
 
-    --font-size-h1: 2vw;
-    --font-size-h2: 1.75vw;
-    --font-size-h3: 1.5vw;
-    --font-size-h4: 1.25vw;
-    --font-size-h5: 1vw;
-    --font-size-h6: .075vw;
+  --font-size-h1: 2vw;
+  --font-size-h2: 1.75vw;
+  --font-size-h3: 1.5vw;
+  --font-size-h4: 1.25vw;
+  --font-size-h5: 1vw;
+  --font-size-h6: 0.075vw;
 
-    --font1: "Oswald", sans-serif;
-    --font2: "Noto Serif", serif;
-} 
+  --font1: "Oswald", sans-serif;
+  --font2: "Noto Serif", serif;
+
+  --navbar-height: 60px;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Oswald", sans-serif;
-    color: var(--font-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  color: var(--font-color);
 }
 
 html {
@@ -43,11 +44,6 @@ body {
   background-image: var(--background-abstract-image);
   background-position: center;
   background-size: cover;
-
-}
-
-.grid-container {
-  display: grid;
 }
 
 .navbar {
@@ -84,7 +80,7 @@ ul {
 a {
   text-decoration: none;
   font-size: 1.5rem;
-  color:var(--font-color);
+  color: var(--font-color);
 }
 
 a:hover {
@@ -98,7 +94,7 @@ header {
 
 .dropdown_menu {
   display: none;
-  position:absolute;
+  position: absolute;
   right: 2rem;
   top: 60px;
   width: 300px;
@@ -135,10 +131,11 @@ header {
   z-index: -1;
 }
 
-
-section#hero {
+#hero {
   background-color: var(--color-black-opacity-100); /* Fallback color */
-  background-color: var(--color-black-opacity-75); /* Opacity on fallback color */
+  background-color: var(
+    --color-black-opacity-75
+  ); /* Opacity on fallback color */
   font-weight: bold;
   border: 2px solid var(--font-color);
   position: absolute;
@@ -150,6 +147,10 @@ section#hero {
   height: 70%;
   padding: 8rem 1rem 4rem 3rem;
   text-align: left;
+}
+
+.mobile-hero {
+  display: none;
 }
 
 #hero h1 {
@@ -164,25 +165,22 @@ section#hero {
   text-wrap: wrap;
 }
 
-
-  /* ------------------------------------------------------------------------ */
-  /* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
 @media (max-width: 1500px) {
-  section#hero {
+  #hero {
     height: 60%;
     width: 80%;
   }
   #hero .hero-background-image {
     background-position: center top;
   }
-
 }
 
-
-  /* ------------------------------------------------------------------------ */
-  /* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
 @media (max-width: 1200px) {
-  section#hero {
+  #hero {
     width: 80%;
     height: 50%;
     padding-top: 5rem;
@@ -193,82 +191,103 @@ section#hero {
   }
 }
 
- 
-  /* ------------------------------------------------------------------------ */
-  /* ------------------------------------------------------------------------ */
-  @media  (max-width: 992px) {
-    .navbar .links {
-      display: none;
-    }
-
-    .navbar .toggle_btn {
-      display: block;
-
-    }
-
-    .dropdown_menu {
-      display: block;
-    }
-
-    section#hero {
-      width: 80%;
-      height: 50%;
-      text-align: left;
-      padding-top: 2.5rem;
-      padding-left: 1.8rem;
-    }
-
-    #hero h3 {
-      max-width: 50%;
-      text-wrap: wrap;
-    }
-
-    .hero-background-image {
-      background-position: center top;
-    }
-    
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+@media (max-width: 992px) {
+  .navbar .links {
+    display: none;
   }
 
-
-  /* ------------------------------------------------------------------------ */
-  /* ------------------------------------------------------------------------ */
-  @media (max-width: 799px) {
-    #hero h1 {
-      max-width: 55%;
-      font-size: 2rem;
-    }
-
-    .hero-background-image {
-      background-position: center center;
-
+  .navbar .toggle_btn {
+    display: block;
   }
 
-    section#hero {
-      height: 50%;
-      padding-top: 1.5rem;
-    }
+  .dropdown_menu {
+    display: block;
   }
 
-
-  /* ------------------------------------------------------------------------ */
-  /* ------------------------------------------------------------------------ */
-  @media (max-width: 576px) {
-    .dropdown_menu {
-      left: 2rem;
-      width: unset;
-    }
-
-    section#hero {
-      width: 96%;
-      height: auto;
-      text-align: center;
-    }
-
-    .hero-background-image {
-      background-position: left center;
-  }
+  #hero {
+    width: 80%;
+    height: 50%;
+    text-align: left;
+    padding-top: 2.5rem;
+    padding-left: 1.8rem;
   }
 
+  #hero h3 {
+    max-width: 50%;
+    text-wrap: wrap;
+  }
 
+  .hero-background-image {
+    background-position: center top;
+  }
+}
 
-  
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+@media (max-width: 799px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* ! ehkä tarpeeton */
+  header {
+    position: sticky;
+  }
+
+  .hero-background-image {
+    display: none;
+  }
+
+  #hero {
+    display: none;
+  }
+
+  #hero-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #682363;
+    margin: 1rem auto;
+    padding-top: var(--navbar-height);
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-image-mobile {
+    background-image: var(--hero-background-image);
+    border: 2px solid var(--font-color);
+    height: 300px;
+    width: 100%;
+    background-position: right 5% top;
+    background-size: cover;
+  }
+
+  #hero h1 {
+    max-width: 100%;
+    font-size: 2rem;
+  }
+}
+
+/* ------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------ */
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+
+  #hero-mobile {
+    width: 95%;
+  }
+
+  .hero-image-mobile {
+    width: 100%;
+    background-position: right 20% top;
+  }
+}
