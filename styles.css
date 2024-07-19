@@ -11,12 +11,12 @@
     --hero-background-image: url(/pics/miia-arkko-junior-software-developer-background-3.jpg);
     --background-abstract-image: url(/pics/abstract-background.jpg);
 
-    --h1: 40px;
-    --h2: 32px;
-    --h3: 28px;
-    --h4: 24px;
-    --h5: 20px;
-    --h6: 16px;
+    --font-size-h1: 2vw;
+    --font-size-h2: 1.75vw;
+    --font-size-h3: 1.5vw;
+    --font-size-h4: 1.25vw;
+    --font-size-h5: 1vw;
+    --font-size-h6: .075vw;
 
     --font1: "Oswald", sans-serif;
     --font2: "Noto Serif", serif;
@@ -51,30 +51,30 @@ body {
 }
 
 .navbar {
-width: 100%;
-height: 60px;
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar .logo a {
-font-size: 1.5rem;
-font-weight: bold;
-color: var(--font-color);
+  font-size: 1.5rem; /* Size can stay as it is in even in responsive */
+  font-weight: bold;
+  color: var(--font-color);
 }
 .navbar .links {
-display: flex;
-gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
 .navbar .toggle_btn {
-color: var(--font-color);
-font-size: 1.5rem;
-cursor: pointer;
-display: none;
+  color: var(--font-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
 }
 
 ul {
@@ -82,14 +82,13 @@ ul {
 }
 
 a {
-text-decoration: none;
-font-size: 1rem;
-color:var(--font-color);
-font-size: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color:var(--font-color);
 }
 
 a:hover {
-color: var(--color-purple);
+  color: var(--color-purple);
 }
 
 header {
@@ -112,7 +111,7 @@ header {
 }
 
 .dropdown_menu.open {
-  height: 240px;
+  height: 300px;
   z-index: 3;
 }
 
@@ -125,21 +124,21 @@ header {
 }
 
 .hero-background-image {
-  background-image: var(--hero-background-image); /* Käytä muuttujaa taustakuvan asettamiseen */
+  background-image: var(--hero-background-image);
   background-position: center top;
   background-size: cover;
-  width: 100%; /* Aseta leveys täydeksi elementin leveyden mukaan */
-  height: 100%; /* Aseta korkeus täydeksi elementin korkeuden mukaan */
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Aseta taustakuvan z-indeksi pienemmäksi kuin section#hero:n z-indeksi */
+  z-index: -1;
 }
 
 
 section#hero {
   background-color: var(--color-black-opacity-100); /* Fallback color */
-  background-color: var(--color-black-opacity-75); /* Black w/opacity/see-through */
+  background-color: var(--color-black-opacity-75); /* Opacity on fallback color */
   font-weight: bold;
   border: 2px solid var(--font-color);
   position: absolute;
@@ -149,22 +148,25 @@ section#hero {
   z-index: 2;
   width: 60%;
   height: 70%;
-  padding: 3rem 0 4rem 2rem;
-  text-align: left; 
+  padding: 8rem 1rem 4rem 3rem;
+  text-align: left;
 }
 
 #hero h1 {
-  font-size: var(--h1);
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-#hero h5 {
-  font-size: var(--h5);
+#hero h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
   max-width: 55%;
   text-wrap: wrap;
 }
 
 
+  /* ------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------ */
 @media (max-width: 1500px) {
   section#hero {
     height: 60%;
@@ -177,10 +179,13 @@ section#hero {
 }
 
 
+  /* ------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------ */
 @media (max-width: 1200px) {
   section#hero {
     width: 80%;
     height: 50%;
+    padding-top: 5rem;
   }
 
   #hero .hero-background-image {
@@ -207,37 +212,46 @@ section#hero {
 
     section#hero {
       width: 80%;
-      height: 40%;
+      height: 50%;
       text-align: left;
+      padding-top: 2.5rem;
+      padding-left: 1.8rem;
     }
 
-    #hero h5 {
+    #hero h3 {
       max-width: 50%;
       text-wrap: wrap;
     }
 
     .hero-background-image {
       background-position: center top;
-  }
+    }
     
   }
 
-  /*  */
+
+  /* ------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------ */
   @media (max-width: 799px) {
     #hero h1 {
-      max-width: 50%;
+      max-width: 55%;
+      font-size: 2rem;
     }
 
     .hero-background-image {
-      background-position: right top;
+      background-position: center center;
+
   }
 
     section#hero {
       height: 50%;
+      padding-top: 1.5rem;
     }
   }
 
 
+  /* ------------------------------------------------------------------------ */
+  /* ------------------------------------------------------------------------ */
   @media (max-width: 576px) {
     .dropdown_menu {
       left: 2rem;
