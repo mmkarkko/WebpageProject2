@@ -237,8 +237,8 @@ header {
   }
 
   #hero {
-    margin: 1rem;
-    max-width: 100%;
+    width: calc(95% - 2rem);
+    margin-top: 2rem;
     height: auto;
     position: relative;
     box-sizing: border-box;
