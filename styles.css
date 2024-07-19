@@ -237,9 +237,11 @@ header {
   }
 
   #hero {
-    width: 100%;
+    margin: 1rem;
+    max-width: 100%;
     height: auto;
     position: relative;
+    box-sizing: border-box;
   }
 
   .hero-content {
