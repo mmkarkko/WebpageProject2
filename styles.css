@@ -44,7 +44,7 @@ body {
   font-family: "Oswald", sans-serif;
   background-image: var(--hero-background-image);
   background-attachment: fixed;
-  background-position: center top;
+  background-position: right top;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -218,11 +218,18 @@ p {
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 @media (max-width: 1200px) {
+  body {
+    background-position: 80% center;
+  }
 }
 
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 @media (max-width: 992px) {
+  body {
+    background-position: 70% center;
+  }
+
   .navbar .links {
     display: none;
   }
@@ -284,6 +291,10 @@ p {
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 @media (max-width: 576px) {
+  body {
+    background-position: 80% center;
+  }
+
   .dropdown_menu {
     left: 2rem;
     width: unset;
