@@ -155,6 +155,10 @@ header {
   overflow: hidden;
 }
 
+.hero-mobile-image {
+  display: none;
+}
+
 .hero-content {
   margin: 8rem 0 8rem 0; /* top - right - bottom -left */
 }
@@ -264,23 +268,51 @@ p {
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 @media (max-width: 799px) {
+  * {
+    color: var(--font-color-black);
+  }
+
+  .navbar .logo a {
+    color: var(--font-color-black);
+  }
+
   body {
     margin: 0;
     padding: 0;
-  }
-
-  .hero-background-image {
-    background-position: right 5% top;
+    background-image: none;
   }
 
   #hero {
-    width: calc(95% - 2rem);
+    max-width: 100%;
+    width: 100%;
+    height: auto;
     box-sizing: border-box;
+  }
+
+  .hero-mobile-image {
+    display: block; /* Muutettu flex:istä block:iksi */
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 kuvasuhde, muuta tarvittaessa */
+    background-image: var(--hero-background-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hero-content {
+    margin: 2rem 1rem; /* Pienennetty marginaalia */
+    padding: 0;
   }
 
   #hero h1 {
     max-width: 100%;
     font-size: 1.7rem;
+    color: var(--font-color-black);
+  }
+
+  #hero h3 {
+    color: var(--font-color-black);
   }
 
   .main-wrapper {
