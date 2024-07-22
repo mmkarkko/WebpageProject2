@@ -149,10 +149,7 @@ header {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  background-color: var(--color-black-opacity-100); /* Fallback color */
-  background-color: var(
-    --color-black-opacity-75
-  ); /* Opacity on fallback color */
+
   font-weight: bold;
   border: 2px solid var(--font-color);
   justify-content: center;
