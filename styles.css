@@ -51,7 +51,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 3rem auto;
 }
@@ -157,7 +157,6 @@ header {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  padding: 2rem;
   text-align: left;
   overflow: hidden;
 }
@@ -165,7 +164,7 @@ header {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 2rem;
+  padding: 4rem 0rem 4rem 5rem;
   max-width: 60%;
 }
 
@@ -177,13 +176,17 @@ header {
 #hero h3 {
   font-size: 1.5rem;
   font-weight: normal;
-  max-width: 55%;
+  max-width: 80%;
   text-wrap: wrap;
 }
 
-#about {
-  padding: 2rem;
+#about,
+#education,
+#skills,
+#experience,
+#contact {
   margin-top: 2rem;
+  max-width: 1200px;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -191,21 +194,28 @@ header {
 @media (max-width: 1500px) {
   #hero {
     height: 60%;
-    width: 80%;
+    max-width: 80%;
   }
   #hero .hero-background-image {
     background-position: center top;
+  }
+
+  .hero-content {
+    padding-left: 3rem;
+  }
+
+  #about,
+  #education,
+  #skills,
+  #experience,
+  #contact {
+    max-width: 80%;
   }
 }
 
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 @media (max-width: 1200px) {
-  #hero {
-    width: 80%;
-    height: 50%;
-    padding-top: 5rem;
-  }
 }
 
 /* ------------------------------------------------------------------------ */
@@ -224,11 +234,8 @@ header {
   }
 
   #hero {
-    width: 80%;
-    height: 50%;
+    width: 100%;
     text-align: left;
-    padding-top: 1rem;
-    padding-left: 1.8rem;
   }
 
   #hero h1 {
@@ -236,7 +243,6 @@ header {
   }
 
   #hero h3 {
-    max-width: 60%;
     text-wrap: wrap;
     font-size: 1.2rem;
   }
@@ -282,5 +288,11 @@ header {
   .dropdown_menu {
     left: 2rem;
     width: unset;
+  }
+
+  .main-wrapper {
+    text-align: left;
+    width: 100%;
+    margin: 0;
   }
 }
