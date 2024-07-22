@@ -269,11 +269,18 @@ p {
 /* ------------------------------------------------------------------------ */
 @media (max-width: 799px) {
   * {
-    color: var(--font-color-black);
+    color: var(--font-color-white);
+  }
+
+  header {
+    background-image: var(--background-abstract-image);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .navbar .logo a {
-    color: var(--font-color-black);
+    color: var(--font-color-white);
   }
 
   body {
