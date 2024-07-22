@@ -5,7 +5,9 @@
   --color-purple: #682363;
   --color-black-opacity-100: rgba(0, 0, 0, 1);
   --color-black-opacity-75: rgba(10, 10, 10, 0.75);
-  --font-color: #fcfcff;
+  --color-white-opacity-75: rgba(252, 252, 255, 0.75);
+  --font-color-white: #fcfcff;
+  --font-color-black: #0a0a0a;
 
   --hero-background-image: url(/pics/miia-arkko-junior-software-developer-background-3.jpg);
   --background-abstract-image: url(/pics/abstract-background.jpg);
@@ -28,7 +30,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
-  color: var(--font-color);
+  color: var(--font-color-white);
 }
 
 html {
@@ -39,12 +41,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  text-align: center;
   font-family: "Oswald", sans-serif;
-  background-color: black;
-  background-image: var(--background-abstract-image);
-  background-position: center;
+  background-image: var(--hero-background-image);
+  background-attachment: fixed;
+  background-position: center top;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main-wrapper {
@@ -53,8 +55,17 @@ body {
   flex-direction: column;
   width: 90%;
   max-width: 1200px;
+  min-height: 100vh;
   margin: 3rem auto;
   padding-bottom: 1rem;
+}
+
+.background-color-wrapper {
+  background-color: var(--color-white-opacity-75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 4rem 5rem 4rem;
 }
 
 .navbar {
@@ -70,7 +81,7 @@ body {
 .navbar .logo a {
   font-size: 1.5rem; /* Size can stay as it is in even in responsive */
   font-weight: bold;
-  color: var(--font-color);
+  color: var(--font-color-white);
 }
 .navbar .links {
   display: flex;
@@ -78,7 +89,7 @@ body {
 }
 
 .navbar .toggle_btn {
-  color: var(--font-color);
+  color: var(--font-color-white);
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
@@ -91,7 +102,7 @@ ul {
 a {
   text-decoration: none;
   font-size: 1.5rem;
-  color: var(--font-color);
+  color: var(--font-color-white);
 }
 
 a:hover {
@@ -131,55 +142,38 @@ header {
   justify-content: center;
 }
 
-.hero-background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: var(--hero-background-image);
-  background-position: right 10% top 20%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
 #hero {
   position: relative;
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-
   font-weight: bold;
-  border: 2px solid var(--font-color);
   justify-content: center;
-  align-items: flex-start;
+  text-align: center;
   width: 100%;
-  text-align: left;
+  height: 100vh;
   overflow: hidden;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
-  padding: 4rem 0rem 4rem 5rem;
-  max-width: 60%;
+  margin: 8rem 0 8rem 0; /* top - right - bottom -left */
 }
 
 #hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  color: var(--font-color-white);
 }
 
 #hero h3 {
   font-size: 1.5rem;
   font-weight: normal;
-  max-width: 80%;
   text-wrap: wrap;
+  color: var(--font-color-white);
 }
 
 h1 {
   margin-bottom: 2rem;
+  color: var(--font-color-black);
 }
 
 #about,
@@ -195,6 +189,7 @@ h1 {
 p {
   text-align: left;
   padding: 1rem 0 1rem 0;
+  color: var(--font-color-black);
 }
 
 /* ------------------------------------------------------------------------ */
@@ -243,7 +238,6 @@ p {
 
   #hero {
     width: 100%;
-    text-align: left;
   }
 
   #hero h1 {
@@ -274,19 +268,16 @@ p {
 
   #hero {
     width: calc(95% - 2rem);
-    margin-top: 2rem;
-    height: auto;
-    position: relative;
     box-sizing: border-box;
-  }
-
-  .hero-content {
-    max-width: 80%;
   }
 
   #hero h1 {
     max-width: 100%;
     font-size: 1.7rem;
+  }
+
+  .main-wrapper {
+    width: 100%;
   }
 }
 
@@ -296,10 +287,5 @@ p {
   .dropdown_menu {
     left: 2rem;
     width: unset;
-  }
-
-  .main-wrapper {
-    width: 100%;
-    margin: 0;
   }
 }
