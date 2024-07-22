@@ -285,6 +285,84 @@ p {
   transition: width 0.5s;
 }
 
+/* ! UUTTA tästä eteetnpäin ----------------- */
+.collapsible {
+  font-family: var(--font2);
+  font-size: large;
+  background-color: var(--color-purple);
+  color: var(--font-color-white);
+  cursor: pointer;
+  padding: 1em;
+  margin-top: 2em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+.active,
+.collapsible:hover {
+  opacity: 80%;
+}
+
+.collapsible:after {
+  content: "\25BC";
+  color: var(--font-color-white);
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\25B2";
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  padding-left: 1rem;
+  font-family: var(--font2);
+  text-wrap: wrap;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: var(--color-white-opacity-75);
+}
+
+.work-info {
+  margin: 0;
+  padding-top: 1rem;
+  font-family: var(--font2);
+}
+
+.work-text {
+  padding-bottom: 1rem;
+  padding-top: 0.7rem;
+}
+
+.work-list-container {
+  height: 100%;
+  color: var(--font-color-black);
+}
+
+.work-list {
+  color: var(--font-color-black);
+  font-family: var(--font2);
+  margin: 0;
+  list-style: disc;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.work-list li {
+  color: var(--font-color-black);
+  font-family: var(--font2);
+}
+
+.content p {
+}
+
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 @media (max-width: 1500px) {

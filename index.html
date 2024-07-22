@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My CV</title>
-    <!-- <link rel="icon" type="image/x-icon" href="/Pics/cvfavicon.ico" /> -->
+    <!-- TODO <link rel="icon" type="image/x-icon" href="/Pics/cvfavicon.ico" /> -->
     <script
       src="https://kit.fontawesome.com/50ff8fbf1d.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
   </head>
   <body>
     <header>
@@ -273,15 +274,111 @@
           <section id="experience">
             <div id="experience-content">
               <h1>Experience</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
+              <button class="collapsible">Caddiemaster - 5/2023-10/2023</button>
+              <div class="content">
+                <p class="work-info">Laukaan Peurunkagolf - Määräaikainen</p>
+                <p class="work-text">Tähän tekstiä kyseisestä työstä...</p>
+              </div>
+
+              <!-- Another work -->
+              <button class="collapsible">Postinjakaja - 12/2018-6/2020</button>
+              <div class="content">
+                <p class="work-info">Kuljetuspalvelu M. Laamanen</p>
+                <p class="work-text">Tähän tekstiä kyseisestä työstä...</p>
+              </div>
+
+              <!-- Another work -->
+              <button class="collapsible">Media worker - 2/2013-10/2013</button>
+              <div class="content">
+                <p class="work-info">Laukaan Kunta - Määräaikainen</p>
+                <div class="work-list-container">
+                  <ul class="work-list">
+                    <li>
+                      Suunnittelin ja toteutin monipuolisia visuaalisia
+                      materiaaleja, kuten esitteitä, opasteita ja
+                      suurkuvatulosteita, noudattaen kunnan graafista ohjeistoa.
+                    </li>
+                    <li>
+                      Kehitin käyttäjäkeskeistä suunnitteluajattelua luomalla
+                      intuitiivisia ja selkeitä visuaalisia ratkaisuja eri
+                      tarkoituksiin.
+                    </li>
+                    <li>
+                      Työskentelin monipuolisesti eri formaateissa, mukaan
+                      lukien painettu ja digitaalinen media, mikä osoittaa kykyä
+                      sopeutua erilaisiin teknisiin vaatimuksiin.
+                    </li>
+                    <li>
+                      Omaksuin nopeasti uusia teknologioita, kuten
+                      3D-tulostuksen, osoittaen kykyä oppia ja soveltaa uusia
+                      teknisiä taitoja tehokkaasti.
+                    </li>
+                    <li>
+                      Hallitsin useita graafisen suunnittelun ohjelmistoja ja
+                      työkaluja, mikä vahvistaa kykyäni omaksua uusia
+                      teknologioita nopeasti.
+                    </li>
+                    <li>Saavutukset:</li>
+                    <li>
+                      Työtehtävien ohessa suoritin osaamistodistuksen
+                      Painoviestinnän perustutkinnon osista, sisältäen mm.
+                      Graafinen tutotantotoiminta, Ulkoasuntoteutus,
+                      Tietotekniikka, Vektorigrafiikka sekä Painotuotteiden
+                      suunnittelu.
+                    </li>
+                    <li>
+                      Sain erityistä kiitosta erinomaisista tietoteknisistä ja
+                      visuaalisista taidoistani.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Another work -->
+              <button class="collapsible">Stay home parent - 2015-2017</button>
+              <div class="content">
+                <p class="work-text">
+                  Kotivanhemmuuden aikana olen kehittänyt arvokkaita
+                  organisointi-, aikataulutus- ja ongelmanratkaisutaitoja.
+                  Ompeluharrastus on vahvistanut luovaa ja tarkkaavaisuutta
+                  vaativaa työskentelyäni. Jatkuva oppimisen asenne ja tiimityö-
+                  sekä kommunikointitaidot ovat myös keskeisiä vahvuuksiani,
+                  joita olen kehittänyt kotona ollessani. Näitä taitoja ja
+                  kokemuksia olen valmis hyödyntämään tulevissa työtehtävissäni.
+                </p>
+              </div>
+
+              <!-- Another work -->
+              <button class="collapsible">Post worker - 2006-2012</button>
+              <div class="content">
+                <p class="work-info">Itella Posti</p>
+                <p class="work-text">Tähän tekstiä kyseisestä työstä...</p>
+              </div>
+
+              <!-- Another work -->
+              <button class="collapsible">
+                Restaurant worker - 9/2005-6/2006
+              </button>
+              <div class="content">
+                <p class="work-info">Vermonportin Burger</p>
+                <p class="work-text">Tähän tekstiä kyseisestä työstä...</p>
+              </div>
+
+              <!-- Another work -->
+              <button class="collapsible">Post worker - 4/2004-8/2005</button>
+              <div class="content">
+                <p class="work-info">Suomen Posti</p>
+                <p class="work-text">Tähän tekstiä kyseisestä työstä...</p>
+              </div>
+
+              <!-- Another work -->
+              <button class="collapsible">
+                Restaurant worker - 10/2003-4/2004
+              </button>
+              <div class="content">
+                <p class="work-info">Carrols</p>
+                <p class="work-text">Tähän tekstiä kyseisestä työstä...</p>
+              </div>
             </div>
           </section>
           <section id="contact">
@@ -301,20 +398,5 @@
         </div>
       </div>
     </main>
-
-    <script>
-      const toggleBtn = document.querySelector(".toggle_btn");
-      const toggleBtnIcon = document.querySelector(".toggle_btn i");
-      const dropDownMenu = document.querySelector(".dropdown_menu");
-
-      toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle("open");
-        const isOpen = dropDownMenu.classList.contains("open");
-
-        toggleBtnIcon.classList = isOpen
-          ? "fa-solid fa-xmark"
-          : "fa-solid fa-bars";
-      };
-    </script>
   </body>
 </html>
