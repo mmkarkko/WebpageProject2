@@ -192,6 +192,8 @@ h1 {
 
 p {
   text-align: left;
+  font-family: var(--font2);
+
   padding: 1rem 0 1rem 0;
   color: var(--font-color-black);
 }
@@ -248,7 +250,9 @@ p {
 
   #hero {
     width: 100%;
+    max-width: 100%;
     height: auto;
+    text-align: left;
   }
 
   #hero h1 {
@@ -258,6 +262,10 @@ p {
   #hero h3 {
     text-wrap: wrap;
     font-size: 1.2rem;
+  }
+
+  .hero-content {
+    padding: 0;
   }
 
   .hero-background-image {
@@ -326,6 +334,14 @@ p {
   .main-wrapper {
     width: 100%;
   }
+
+  #about,
+  #education,
+  #skills,
+  #experience,
+  #contact {
+    max-width: 100%;
+  }
 }
 
 /* Media with max 576px display */
@@ -340,4 +356,15 @@ p {
     left: 2rem;
     width: unset;
   }
+
+  #about,
+  #education,
+  #skills,
+  #experience,
+  #contact {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
+
+/* ! NEED TO ADD ANOTHER SMALLER MEDIA QUERY, BC HERO SLOGAN GROWS TOO HIGH */
