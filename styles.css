@@ -54,6 +54,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 3rem auto;
+  padding-bottom: 1rem;
 }
 
 .navbar {
@@ -118,7 +119,7 @@ header {
 }
 
 .dropdown_menu.open {
-  height: 300px;
+  height: 360px;
   z-index: 3;
 }
 
@@ -180,6 +181,10 @@ header {
   text-wrap: wrap;
 }
 
+h1 {
+  margin-bottom: 2rem;
+}
+
 #about,
 #education,
 #skills,
@@ -187,6 +192,11 @@ header {
 #contact {
   margin-top: 2rem;
   max-width: 1200px;
+  padding-bottom: 2rem;
+}
+
+p {
+  text-align: left;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -291,7 +301,6 @@ header {
   }
 
   .main-wrapper {
-    text-align: left;
     width: 100%;
     margin: 0;
   }
