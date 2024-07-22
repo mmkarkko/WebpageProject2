@@ -198,7 +198,7 @@ p {
   color: var(--font-color-black);
 }
 
-/* UUUTTA            ----------------------------------------------*/
+/* UUUTTA    vanhasta koodista tästä alas        ----------------------------------------------*/
 .flex-container {
   max-width: 100%;
   margin: 0;
@@ -241,6 +241,48 @@ p {
 #education p {
   padding: 0.5rem;
   margin: 0;
+}
+
+.skills-container {
+  width: 100%;
+  margin: 0;
+  gap: 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#skills {
+  padding-bottom: 1em;
+}
+
+.skill {
+  flex: 1 1 20%;
+  margin: 0 1.5em 0 0; /* top - right - bottom - left */
+}
+
+.skill-name {
+  margin: 0;
+}
+
+.skill-bar {
+  width: 300px;
+  background-color: #ddd;
+  margin: 10px 0;
+  overflow: hidden;
+  font-family: "Anton SC", sans-serif;
+  font-size: 0.65em;
+  letter-spacing: 0.15em;
+}
+
+.skill-bar-fill {
+  height: 24px;
+  background-color: #682363;
+  width: 0;
+  text-align: right;
+  line-height: 24px;
+  color: #fff;
+  padding-right: 5px;
+  transition: width 0.5s;
 }
 
 /* ------------------------------------------------------------------------ */
