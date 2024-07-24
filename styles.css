@@ -212,10 +212,20 @@ header {
   background-image: var(--logo-image-black);
   height: 45px;
   min-width: 175px;
+  padding-bottom: 5rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: var(--spacing-medium);
+}
+
+#info a {
+  color: var(--color-purple);
+  font-size: var(--font-size-h3);
+}
+
+#info a:hover {
+  color: var(--font-color-black);
 }
 
 h1 {
