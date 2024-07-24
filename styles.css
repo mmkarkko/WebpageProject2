@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   /* Colors */
   --color-turquoise: #2f8599;
@@ -35,6 +34,7 @@
   /* Fonts */
   --font-primary: "Roboto", sans-serif;
   --font-secondary: "Open Sans", serif;
+  --font-github: "Inter", sans-serif;
 
   /* Layout */
   --navbar-height: 60px;
@@ -223,10 +223,67 @@ header {
 #info a {
   color: var(--color-purple);
   font-size: var(--font-size-h4);
+  text-decoration: underline;
 }
 
 #info a:hover {
   color: var(--font-color-black);
+}
+
+/* Social media buttons */
+.some-container {
+  margin-bottom: var(--spacing-large);
+}
+.some {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: var(--spacing-large);
+  list-style: none;
+  gap: var(--spacing-large);
+}
+
+#info .some-button-linkedin:link,
+#info .some-button-linkedin:visited,
+#info .some-button-github:link,
+#info .some-button-github:visited {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#info .some-button-linkedin {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+}
+
+#info .some-button-github {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica", "Arial", sans-serif;
+  font-size: 32px;
+  font-weight: var(--font-weight-medium-bold);
+  color: #24292e;
+}
+
+.linked {
+  color: #0077b5; /* LinkedIn sininen */
+}
+
+.in {
+  color: #fff;
+  background-color: #0077b5; /* LinkedIn sininen */
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: 1px;
+}
+
+.linkedin-logo:hover {
+  opacity: 0.8; /* Lisää hover-efektin */
+}
+
+.github-logo:hover {
+  color: #0366d6;
 }
 
 h1 {
@@ -257,7 +314,7 @@ h3 {
 #contact {
   margin-top: var(--spacing-large);
   max-width: 1200px;
-  padding-bottom: 2rem;
+  padding-bottom: var(--spacing-large);
 }
 
 p {
