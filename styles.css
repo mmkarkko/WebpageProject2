@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
 
 :root {
-  --color-lightgrey: #bebebe;
-  --color-purple: #682363;
+  --color-turquoise: #2f8599;
+  --color-purple: #a555ac;
   --color-black-opacity-100: rgba(0, 0, 0, 1);
   --color-black-opacity-75: rgba(10, 10, 10, 0.75);
   --color-white-opacity-75: rgba(252, 252, 255, 0.75);
@@ -11,6 +11,7 @@
 
   --hero-background-image: url(/pics/miia-arkko-junior-software-developer-background-3.jpg);
   --background-abstract-image: url(/pics/abstract-background.jpg);
+  --logo-image: url(/pics/miiaArkko-logo.png);
 
   --font-size-h1: 2vw;
   --font-size-h2: 1.75vw;
@@ -79,10 +80,17 @@ body {
 }
 
 .navbar .logo a {
-  font-size: 1.5rem; /* Size can stay as it is in even in responsive */
-  font-weight: bold;
-  color: var(--font-color-white);
+  /* font-size: 1.5rem; /* Size can stay as it is in even in responsive 
+    font-weight: bold;
+    color: var(--font-color-white); */
 }
+
+.navbar .logo img {
+  padding-top: 5px;
+  height: 45px;
+  width: auto;
+}
+
 .navbar .links {
   display: flex;
   gap: 2rem;
