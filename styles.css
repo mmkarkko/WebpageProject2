@@ -123,6 +123,7 @@ header {
   position: relative;
   padding: 0 var(--spacing-large);
   height: var(--navbar-height);
+  z-index: 3;
 }
 
 .dropdown_menu {
@@ -298,10 +299,11 @@ p {
   }
 
   header {
-    background-image: var(--background-abstract-image);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: var(--background-abstract-image); */ /* Poistettu */
+    /* background-position: center center; */ /* Poistettu */
+    /* background-repeat: no-repeat; */ /* Poistettu */
+    /* background-size: cover; */ /* Poistettu */
+    background: transparent; /* Lisätty */
   }
 
   body {
@@ -310,23 +312,32 @@ p {
     background-image: none;
   }
 
+  .background-color-wrapper {
+    background-color: var(--color-white-opacity-75);
+    z-index: 2;
+  }
+
   #hero {
     max-width: 100%;
     width: 100%;
-    height: auto;
+    height: 340px; /* Muutettu auto -> 100vh */
     box-sizing: border-box;
     position: relative;
+    z-index: 1; /* Lisätty */
   }
 
   .hero-mobile-image {
-    display: block;
+    position: fixed; /* Muutettu block -> fixed */
+    top: 0; /* Lisätty */
+    left: 0; /* Lisätty */
     width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 picture-ratio */
+    height: 100vh; /* Muutettu */
+    /* padding-bottom: 56.25%; */ /* Poistettu */
     background-image: var(--hero-background-image);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: -1; /* Lisätty */
   }
 
   .hero-content {
@@ -346,6 +357,8 @@ p {
 
   .main-wrapper {
     width: 100%;
+    position: relative; /* Lisätty */
+    z-index: 1; /* Lisätty */
   }
 
   #about,
@@ -354,6 +367,7 @@ p {
   #experience,
   #contact {
     max-width: 100%;
+    z-index: 3;
   }
 }
 
