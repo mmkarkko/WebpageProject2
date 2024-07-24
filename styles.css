@@ -13,15 +13,14 @@
   --background-abstract-image: url(/pics/abstract-background.jpg);
   --logo-image: url(/pics/miiaArkko-logo.png);
 
-  --font-size-h1: 2vw;
-  --font-size-h2: 1.75vw;
-  --font-size-h3: 1.5vw;
-  --font-size-h4: 1.25vw;
-  --font-size-h5: 1vw;
-  --font-size-h6: 0.075vw;
+  --font-size-h1: min(2vw, 36px);
+  --font-size-h2: min(1.67vw, 30px);
+  --font-size-h3: min(1.33vw, 24px);
+  --font-size-body: max(0.89vw, 16px);
+  --font-size-small: max(0.78vw, 14px);
 
-  --font1: "Roboto", sans-serif;
-  --font2: "Open Sans", serif;
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Open Sans", serif;
 
   --navbar-height: 60px;
 }
@@ -30,7 +29,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Oswald", sans-serif;
+  font-family: var(--font);
   color: var(--font-color-white);
 }
 
@@ -157,10 +156,6 @@ header {
   overflow: hidden;
 }
 
-.hero-mobile-image {
-  display: none;
-}
-
 .hero-content {
   margin: 8rem 0 8rem 0; /* top - right - bottom -left */
 }
@@ -194,102 +189,17 @@ h1 {
 
 p {
   text-align: left;
-  font-family: var(--font2);
+  font-family: var(--font-secondary);
 
   padding: 1rem 0 1rem 0;
   color: var(--font-color-black);
 }
 
 /* UUUTTA    vanhasta koodista tästä alas        ----------------------------------------------*/
-.flex-container {
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-.flex-item {
-  border-left: 5px solid #682363;
-  padding-left: 1em;
-  min-height: 300px;
-  width: 40%;
-  flex: 1 1 40%; /* grow - shrink - size */
-  margin: 2rem 4rem 0 0; /* top - right - bottom - left */
-}
-
-.flex-item:hover {
-  cursor: pointer;
-  transition: all 0.5s ease-in;
-  background-color: var(--color-white-opacity-75);
-}
-
-.school-header,
-.years {
-  font-optical-sizing: auto;
-}
-
-.school-header {
-  text-transform: uppercase;
-}
-
-.edu-text {
-  margin: 1rem 0 0 0;
-  text-align: justify;
-}
-
-#education p {
-  padding: 0.5rem;
-  margin: 0;
-}
-
-.skills-container {
-  width: 100%;
-  margin: 0;
-  gap: 2em;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#skills {
-  padding-bottom: 1em;
-}
-
-.skill {
-  flex: 1 1 20%;
-  margin: 0 1.5em 0 0; /* top - right - bottom - left */
-}
-
-.skill-name {
-  margin: 0;
-}
-
-.skill-bar {
-  width: 300px;
-  background-color: #ddd;
-  margin: 10px 0;
-  overflow: hidden;
-  font-family: "Anton SC", sans-serif;
-  font-size: 0.65em;
-  letter-spacing: 0.15em;
-}
-
-.skill-bar-fill {
-  height: 24px;
-  background-color: #682363;
-  width: 0;
-  text-align: right;
-  line-height: 24px;
-  color: #fff;
-  padding-right: 5px;
-  transition: width 0.5s;
-}
 
 /* ! UUTTA tästä eteetnpäin ----------------- */
 .collapsible {
-  font-family: var(--font2);
+  font-family: var(--font-secondary);
   font-size: large;
   background-color: var(--color-purple);
   color: var(--font-color-white);
@@ -322,7 +232,7 @@ p {
   width: 100%;
   height: 100%;
   padding-left: 1rem;
-  font-family: var(--font2);
+  font-family: var(--font-secondary);
   text-wrap: wrap;
   max-height: 0;
   overflow: hidden;
@@ -333,7 +243,7 @@ p {
 .work-info {
   margin: 0;
   padding-top: 1rem;
-  font-family: var(--font2);
+  font-family: var(--font-secondary);
 }
 
 .work-text {
@@ -348,7 +258,7 @@ p {
 
 .work-list {
   color: var(--font-color-black);
-  font-family: var(--font2);
+  font-family: var(--font-secondary);
   margin: 0;
   list-style: disc;
   width: 100%;
@@ -359,10 +269,7 @@ p {
 
 .work-list li {
   color: var(--font-color-black);
-  font-family: var(--font2);
-}
-
-.content p {
+  font-family: var(--font-secondary);
 }
 
 /* ------------------------------------------------------------------------ */
@@ -504,13 +411,6 @@ p {
   #experience,
   #contact {
     max-width: 100%;
-  }
-
-  .flex-item {
-    padding-right: 0;
-    margin-right: 0;
-    width: 100%;
-    flex: auto;
   }
 }
 
