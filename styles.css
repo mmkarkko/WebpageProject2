@@ -29,7 +29,7 @@
   /* Font weights */
   --font-weight-bold: 700;
   --font-weight-medium-bold: 600;
-  --font-weight-normal: var(--font-weight-normal);
+  --font-weight-normal: 400;
 
   /* Fonts */
   --font-primary: "Roboto", sans-serif;
@@ -43,6 +43,7 @@
   --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
   --spacing-large: 2rem;
+  --spacing-xlarge: 3rem;
 }
 
 * {
@@ -272,18 +273,48 @@ header {
 
 .in {
   color: #fff;
-  background-color: #0077b5; /* LinkedIn sininen */
+  background-color: #0077b5; /* LinkedIn blue */
   padding: 2px 4px;
   border-radius: 4px;
   margin-left: 1px;
 }
 
 .linkedin-logo:hover {
-  opacity: 0.8; /* Lisää hover-efektin */
+  opacity: 0.8;
 }
 
 .github-logo:hover {
   color: #0366d6;
+}
+
+/* Button styles ---------*/
+#contact-buttons {
+  display: flex;
+  gap: var(--spacing-xlarge);
+  margin: 20px 0;
+}
+
+/* TODO change px to var where possible*/
+#info .button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--font-color-white);
+  text-decoration: none;
+  background-color: var(--color-purple);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+#info .button:hover {
+  background-color: var(--color-turquoise);
+  transform: scale(1.05); /* Slightly enlarges on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
 }
 
 h1 {
