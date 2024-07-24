@@ -16,11 +16,18 @@
   --logo-image: url(/pics/miiaArkko-logo.png);
 
   /* Font sizes */
+  --font-size-hero-h1: 2.5rem;
+  --font-size-hero-h3: 1.7rem;
   --font-size-h1: min(2vw, 36px);
   --font-size-h2: min(1.67vw, 30px);
   --font-size-h3: min(1.33vw, 24px);
   --font-size-body: max(0.89vw, 16px);
   --font-size-small: max(0.78vw, 14px);
+
+  /* Font weights */
+  --font-weight-bold: 700;
+  --font-weight-medium-bold: 600;
+  --font-weight-normal: var(--font-weight-normal);
 
   /* Fonts */
   --font-primary: "Roboto", sans-serif;
@@ -112,6 +119,7 @@ ul {
 a {
   text-decoration: none;
   font-size: 1.5rem;
+  font-weight: var(--font-weight-medium-bold);
   color: var(--font-color-white);
 }
 
@@ -158,7 +166,6 @@ header {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
-  font-weight: bold;
   justify-content: center;
   text-align: center;
   width: 100%;
@@ -171,24 +178,25 @@ header {
 }
 
 #hero h1 {
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-hero-h1);
   font-family: var(--font-primary);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
   color: var(--font-color-white);
   margin-bottom: var(--spacing-large);
 }
 
 #hero h3 {
-  font-size: var(--font-size-h3);
+  font-size: var(--font-size-hero-h3);
   font-family: var(--font-secondary);
-  font-weight: 600;
+  font-weight: var(-font-weight-medium-bold);
   text-wrap: wrap;
   color: var(--font-color-white);
 }
 
 h1 {
   font-family: var(--font-primary);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-h1);
   margin-bottom: var(--spacing-large);
   color: var(--font-color-black);
@@ -196,13 +204,13 @@ h1 {
 
 h2 {
   font-family: var(--font-primary);
-  font-weight: 600;
+  font-weight: var(--font-weight-medium-bold);
   font-size: var(--font-size-h2);
 }
 
 h3 {
   font-family: var(--font-secondary);
-  font-weight: 600;
+  font-weight: var(--font-weight-medium-bold);
   font-size: var(--font-size-h3);
 }
 
@@ -218,7 +226,7 @@ h3 {
 
 p {
   font-family: var(--font-secondary);
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   font-size: var(--font-size-body);
   text-align: left;
   padding: var(--spacing-medium) 0;
@@ -299,11 +307,7 @@ p {
   }
 
   header {
-    /* background-image: var(--background-abstract-image); */ /* Poistettu */
-    /* background-position: center center; */ /* Poistettu */
-    /* background-repeat: no-repeat; */ /* Poistettu */
-    /* background-size: cover; */ /* Poistettu */
-    background: transparent; /* Lisätty */
+    background: transparent;
   }
 
   body {
@@ -320,26 +324,24 @@ p {
   #hero {
     max-width: 100%;
     width: 100%;
-    height: 340px; /* Muutettu auto -> 100vh */
+    height: 340px;
     box-sizing: border-box;
     position: relative;
     z-index: 1; /* Lisätty */
   }
 
   .hero-mobile-image {
-    position: fixed; /* Muutettu block -> fixed */
-    top: 0; /* Lisätty */
-    left: 0; /* Lisätty */
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh; /* Muutettu */
-    /* padding-bottom: 56.25%;  /* Poistettu */
+    height: 100vh;
     background-image: var(--hero-background-image);
 
     background-position: 80% top;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: -1; /* Lisätty */
-  }
+    z-index: -1;
 
   .hero-content {
     position: absolute;
@@ -358,8 +360,8 @@ p {
 
   .main-wrapper {
     width: 100%;
-    position: relative; /* Lisätty */
-    z-index: 1; /* Lisätty */
+    position: relative;
+    z-index: 1;
   }
 
   #about,
