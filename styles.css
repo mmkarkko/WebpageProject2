@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
   --color-turquoise: #2f8599;
@@ -20,8 +20,8 @@
   --font-size-h5: 1vw;
   --font-size-h6: 0.075vw;
 
-  --font1: "Oswald", sans-serif;
-  --font2: "Noto Serif", serif;
+  --font1: "Roboto", sans-serif;
+  --font2: "Open Sans", serif;
 
   --navbar-height: 60px;
 }
@@ -79,12 +79,6 @@ body {
   justify-content: space-between;
 }
 
-.navbar .logo a {
-  /* font-size: 1.5rem; /* Size can stay as it is in even in responsive 
-    font-weight: bold;
-    color: var(--font-color-white); */
-}
-
 .navbar .logo img {
   padding-top: 5px;
   height: 45px;
@@ -138,7 +132,7 @@ header {
 }
 
 .dropdown_menu.open {
-  height: 360px;
+  height: 310px;
   z-index: 3;
 }
 
@@ -458,10 +452,6 @@ p {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-
-  .navbar .logo a {
-    color: var(--font-color-white);
   }
 
   body {
