@@ -13,7 +13,8 @@
   /* Images */
   --hero-background-image: url(/pics/miia-arkko-junior-software-developer-background-3.jpg);
   --background-abstract-image: url(/pics/abstract-background.jpg);
-  --logo-image: url(/pics/miiaArkko-logo.png);
+  --logo-image-white: url(/pics/miiaArkko-logo-white.png);
+  --logo-image-black: url(/pics/miiaArkko-logo-black.png);
 
   /* Font sizes */
   --font-size-hero-h1: 2.5rem;
@@ -95,10 +96,14 @@ body {
   justify-content: space-between;
 }
 
-.navbar .logo img {
+.navbar-logo-container {
   padding-top: 5px;
-  height: 45px;
-  width: auto;
+  height: 40px;
+  min-width: 200px;
+  background-image: var(--logo-image-white);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navbar .links {
@@ -195,6 +200,15 @@ header {
   color: var(--font-color-white);
 }
 
+.info-logo-container {
+  background-image: var(--logo-image-black);
+  height: 45px;
+  min-width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 h1 {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-bold);
@@ -215,6 +229,7 @@ h3 {
   font-size: var(--font-size-h3);
 }
 
+#info,
 #about,
 #education,
 #skills,
@@ -244,6 +259,7 @@ p {
 /* ------------------------------------------------------------------------ */
 @media (max-width: 1500px) {
   #hero,
+  #info,
   #about,
   #education,
   #skills,
@@ -367,6 +383,7 @@ p {
     z-index: 1;
   }
 
+  #info,
   #about,
   #education,
   #skills,
@@ -398,6 +415,7 @@ p {
     max-width: 40%;
   }
 
+  #info,
   #about,
   #education,
   #skills,
