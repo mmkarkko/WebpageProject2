@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/WebFonts/Roboto-Regular.woff2") format("woff2"),
+    url("/WebFonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/WebFonts/Roboto-Bold.woff2") format("woff2"),
+    url("/WebFonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/WebFonts/OpenSans-Regular.woff2") format("woff2"),
+    url("/WebFonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/WebFonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("/WebFonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/WebFonts/Inter-Regular.woff2") format("woff2"),
+    url("/WebFonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Font variables */
+:root {
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Open Sans", serif;
+  --font-github: "Inter", sans-serif;
+
+  /* Font sizes */
+  --font-size-hero-h1: 40px;
+  --font-size-hero-h3: 27.2px;
+  --font-size-hero-mobile-h1: 28.8px;
+  --font-size-h1: 36px;
+  --font-size-h2: 30px;
+  --font-size-h3: 24px;
+  --font-size-h4: 18px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+
+  /* Font weights */
+  --font-weight-bold: 700;
+  --font-weight-medium-bold: 600;
+  --font-weight-normal: 400;
+}

@@ -1,3 +1,4 @@
+/* Creates dropdown menu */
 document.addEventListener("DOMContentLoaded", function () {
   var coll = document.getElementsByClassName("collapsible");
   var i;
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
+  /* Creates dropdown menu icons */
   const toggleBtn = document.querySelector(".toggle_btn");
   const toggleBtnIcon = document.querySelector(".toggle_btn i");
   const dropDownMenu = document.querySelector(".dropdown_menu");
@@ -43,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var emailLink =
     "<a href='mailto:" + part5 + "' class='button email-button'>Contact Me</a>";
   var cvLink =
-    "<a href='path/to/your-cv.pdf' class='button cv-button'>Download CV</a>";
+    "<a href='/download_cv.php' class='button cv-button' rel='noopener noreferrer'>Download CV</a>";
 
   document.getElementById("contact-buttons").innerHTML =
     emailLink + " " + cvLink;
