@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Shows andthe notification */
 document.addEventListener("DOMContentLoaded", function () {
   const reveal = document.querySelector(".reveal");
-  let isHidden = true;
+  let isHidden = true; // Muutettu true:ksi
 
   function hideNotification() {
     reveal.classList.add("hidden");
@@ -75,9 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Piilotetaan ilmoitus heti alussa ja lisätään huutomerkki-ikoni
+  // Piilotetaan ilmoitus heti alussa
   hideNotification();
 
+  // Toggle visibility on click
   reveal.addEventListener("click", function (event) {
     event.preventDefault();
     if (isHidden) {
@@ -86,4 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
       hideNotification();
     }
   });
+
+  // Poistetaan turhat event listenerit
+  reveal.removeEventListener("mouseenter", function () {});
+  reveal.removeEventListener("mousemove", function () {});
 });
