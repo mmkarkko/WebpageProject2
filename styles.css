@@ -210,61 +210,6 @@ header {
   color: var(--font-color-black);
 }
 
-/* Social media buttons */
-.some-container {
-  margin-bottom: var(--spacing-large);
-}
-.some {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  margin-top: var(--spacing-large);
-  list-style: none;
-  gap: var(--spacing-large);
-}
-
-#info .some-button-linkedin:link,
-#info .some-button-linkedin:visited,
-#info .some-button-github:link,
-#info .some-button-github:visited {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-#info .some-button-linkedin {
-  font-family: var(--font-primary);
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-bold);
-}
-
-#info .some-button-github {
-  font-family: var(--font-github);
-  font-size: 32px;
-  font-weight: var(--font-weight-medium-bold);
-  color: #24292e;
-}
-
-.linked {
-  color: #0077b5; /* LinkedIn sininen */
-}
-
-.in {
-  color: #fff;
-  background-color: #0077b5; /* LinkedIn blue */
-  padding: 2px 4px;
-  border-radius: 4px;
-  margin-left: 1px;
-}
-
-.linkedin-logo:hover {
-  opacity: 0.8;
-}
-
-.github-logo:hover {
-  color: #0366d6;
-}
-
 /* Button styles ---------*/
 #contact-buttons {
   display: flex;
@@ -341,6 +286,74 @@ p {
   font-size: var(--font-size-small);
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  z-index: 3;
+}
+
+.footer-info {
+  font-size: var(--font-size-h4);
+  padding-bottom: 2rem;
+}
+
+/* Social media buttons */
+.some-container {
+  margin-bottom: var(--spacing-large);
+}
+.some {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-top: var(--spacing-large);
+  list-style: none;
+  gap: var(--spacing-large);
+}
+
+#info .some-button-linkedin:link,
+#info .some-button-linkedin:visited,
+#info .some-button-github:link,
+#info .some-button-github:visited {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#info .some-button-linkedin {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+}
+
+#info .some-button-github {
+  font-family: var(--font-github);
+  font-size: 32px;
+  font-weight: var(--font-weight-medium-bold);
+  color: #24292e;
+}
+
+.linked {
+  color: #0077b5; /* LinkedIn sininen */
+}
+
+.in {
+  color: #fff;
+  background-color: #0077b5; /* LinkedIn blue */
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: 1px;
+}
+
+.linkedin-logo:hover {
+  opacity: 0.8;
+}
+
+.github-logo:hover {
+  color: #0366d6;
+}
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 @media (max-width: 1500px) {
