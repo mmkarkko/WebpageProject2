@@ -2,6 +2,7 @@
 :root {
   /* Colors */
   --color-turquoise: #2f8599;
+  --color-turquoise-opacity-75: #2f8599bf;
   --color-purple: #a555ac;
   --color-black-opacity-100: #000;
   --color-black-opacity-75: rgba(10, 10, 10, 0.75);
@@ -55,7 +56,7 @@ body {
   width: 90%;
   max-width: 1200px;
   min-height: 100vh;
-  margin: 0 auto;
+  margin: 0 auto; /* TODO: keskitys ei enää toimi oikein, kun notification lisätty */
   padding-bottom: var(--spacing-medium);
 }
 
@@ -136,7 +137,7 @@ header {
 }
 
 .dropdown_menu.open {
-  height: 340px;
+  height: 120px; /* TODO: korjaa tämä, kun lisäät sisältöä*/
   z-index: 3;
 }
 
@@ -146,6 +147,58 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.reveal {
+  position: fixed;
+  left: 0;
+  top: 200px;
+  width: 540px;
+  transition: transform 0.5s ease-out;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.reveal.hidden {
+  transform: translateX(calc(-100% + 40px));
+}
+
+.construction-notice {
+  position: absolute;
+  top: 0;
+  width: 530px;
+  height: 100px;
+  padding: 2rem 3rem;
+  border-radius: 0 0 25px 0;
+  background-color: var(--color-turquoise-opacity-75);
+}
+
+#construction-text {
+  position: absolute;
+  left: 30px;
+  top: 40px;
+  color: var(--font-color-white);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-h4);
+}
+
+/* TODO: huutomerkki ei näy heti aluksi pienillä näytöillä */
+.notification-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--font-color-white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-purple);
 }
 
 #hero {
@@ -381,6 +434,28 @@ footer {
 @media (max-width: 992px) {
   body {
     background-position: 70% center;
+  }
+
+  /* TODO: tämä on tässä nyt toistaiseksi näin */
+  .construction-notice {
+    position: absolute;
+    right: 0;
+    top: 200px;
+  }
+
+  .reveal {
+    position: fixed;
+    left: 0;
+    top: 320px;
+    width: 540px;
+  }
+
+  .construction-notice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 530px;
+    height: 100px;
   }
 
   .navbar .links {

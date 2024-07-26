@@ -49,3 +49,41 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("contact-buttons").innerHTML =
     emailLink + " " + cvLink;
 });
+
+/* Shows andthe notification */
+document.addEventListener("DOMContentLoaded", function () {
+  const reveal = document.querySelector(".reveal");
+  let isHidden = true;
+
+  function hideNotification() {
+    reveal.classList.add("hidden");
+    isHidden = true;
+    if (!reveal.querySelector(".notification-icon")) {
+      reveal.insertAdjacentHTML(
+        "beforeend",
+        '<div class="notification-icon">!</div>'
+      );
+    }
+  }
+
+  function showNotification() {
+    reveal.classList.remove("hidden");
+    isHidden = false;
+    const icon = reveal.querySelector(".notification-icon");
+    if (icon) {
+      icon.remove();
+    }
+  }
+
+  // Piilotetaan ilmoitus heti alussa ja lisätään huutomerkki-ikoni
+  hideNotification();
+
+  reveal.addEventListener("click", function (event) {
+    event.preventDefault();
+    if (isHidden) {
+      showNotification();
+    } else {
+      hideNotification();
+    }
+  });
+});
