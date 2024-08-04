@@ -11,8 +11,9 @@
   --font-color-black: #0a0a0a;
 
   /* Images */
-  --hero-background-image: url(/pics/miia-arkko-junior-software-developer-background-3.jpg);
-  --background-abstract-image: url(/pics/abstract-background.jpg);
+  --hero-background-image: url(/Pics/miia-arkko-junior-software-developer-background-3.jpg);
+  --hero-background-image-mobile: url(/Pics/miia-arkko-junior-software-developer-mobile.jpg);
+  --background-abstract-image: url(/pics/abstract-background.jpg); /* TODO Tätä ei varmaan tarvita*/
   --logo-image-white: url(/pics/miiaArkko-logo-white.png);
   --logo-image-black: url(/pics/miiaArkko-logo-black.png);
 
@@ -529,7 +530,6 @@ footer {
     width: 100%;
     height: 100vh;
     background-image: var(--hero-background-image);
-
     background-position: 80% top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -574,7 +574,6 @@ footer {
 @media (max-width: 576px) {
 :root {
   --hero-background-image: none;
-
 }
 
 * {
@@ -597,6 +596,12 @@ footer {
   #hero {
     display: flex;
     flex-direction: column; 
+    width: 100%;
+  }
+
+  .hero-mobile-image {
+    background-image: var(--hero-background-image-mobile);
+    height: 200px;
     width: 100%;
   }
 
