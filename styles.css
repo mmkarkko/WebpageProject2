@@ -595,23 +595,26 @@ footer {
 
   #hero {
     display: flex;
-    flex-direction: column; 
-    width: 100%;
+    flex-direction: column;
+    height: auto;
   }
 
   .hero-mobile-image {
-    background-image: var(--hero-background-image-mobile);
-    height: 200px;
+    position: static;
     width: 100%;
+    height: 300px;
+    background-image: var(--hero-background-image-mobile);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   #hero .hero-content {
     width: 100%;
     max-width: 100%;
     position: static;
-    left: auto;
-    right: auto;
-    text-align: center;   
+    padding: var(--spacing-medium);
+    text-align: center;
   }
 
   .dropdown_menu {
