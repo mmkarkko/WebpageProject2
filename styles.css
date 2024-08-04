@@ -577,7 +577,17 @@ footer {
 }
 
   body {
-    background-image: none !important;
+    background-image: none;
+  }
+
+  .navbar-logo-container {
+    background-image: var(--logo-image-black);
+  }
+
+  #hero {
+    display: flex;
+    flex-direction: column;
+    
   }
 
   .dropdown_menu {
@@ -587,10 +597,16 @@ footer {
 
   #hero h1 {
     font-size: var(--font-size-hero-mobile-h1);
+    color: var(--color-black-opacity-100);
+  }
+
+  #hero h3 {
+    color: var(--color-black-opacity-100);
   }
 
   .hero-content {
     max-width: 40%;
+    
   }
 
   #info,
