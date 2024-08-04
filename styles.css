@@ -600,9 +600,13 @@ footer {
     width: 100%;
   }
 
-  #hero-content {
+  #hero .hero-content {
     width: 100%;
-    position:unset;
+    max-width: 100%;
+    position: static;
+    left: auto;
+    right: auto;
+    text-align: center;   
   }
 
   .dropdown_menu {
