@@ -610,7 +610,7 @@ footer {
   }
 
   #hero .hero-content {
-    width: 100%;
+
     max-width: 100%;
     position: static;
     padding: var(--spacing-medium);
@@ -625,10 +625,26 @@ footer {
   #hero h1 {
     font-size: var(--font-size-hero-mobile-h1);
     color: var(--color-black-opacity-100);
+    text-align: center;
   }
 
   #hero h3 {
     color: var(--color-black-opacity-100);
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .info-logo-container {
+    display: none;
+  }
+
+  #contact-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #info .button {
+    font-size: var(--font-size-small);
   }
 
   #info,
@@ -651,14 +667,11 @@ footer {
 
   #hero h1 {
     font-size: 1.8rem;
+    text-align: center;
   }
 
   #hero h3 {
     font-size: 1.1rem;
-  }
-
-  .info-logo-container {
-    display: none;
   }
 
   .hero-content {
@@ -668,10 +681,11 @@ footer {
   #contact-buttons {
     flex-direction: column;
     gap: var(--spacing-medium);
+  align-items: center;
   }
 
   #info .button {
-    width: 100%;
+    width: 65%;
     font-size: var(--font-size-small);
   }
 
