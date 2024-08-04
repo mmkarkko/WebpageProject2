@@ -653,8 +653,16 @@ footer {
   #skills,
   #experience,
   #contact {
-    width: 100%;
-    margin-top: var(--spacing-medium);
+    text-align: center;
+  }
+
+  #info h1,
+  #about h1,
+  #education h1,
+  #skills h1,
+  #experience h1,
+  #contact h1{
+  align-items: center;
   }
 
   .some-button-github {
