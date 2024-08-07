@@ -1,11 +1,12 @@
 Options -Indexes
 
-# Estä pääsy suoraan tiedostoon
+# Aktivoi mod_rewrite
 
-<Files "Downloads/ICT_Resume_MA2024.pdf">
-Order Deny,Allow
-Deny from all
-</Files>
+RewriteEngine On
+
+# Estä pääsy suoraan PDF-tiedostoihin Downloads-kansiossa
+
+RewriteRule ^Downloads/.\*\.pdf$ - [F,L]
 
 # Salli pääsy resource_manager.php:hen
 
