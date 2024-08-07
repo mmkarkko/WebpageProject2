@@ -17,15 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Creates dropdown menu icons */
   const toggleBtn = document.querySelector(".toggle_btn");
   const toggleBtnIcon = document.querySelector(".toggle_btn i");
-  const dropDownMenu = document.querySelector(".dropdown_menu");
+  const dropDownMenu = document.querySelector(".mobile-dropdown-menu");
+  const srOnlySpan = toggleBtn.querySelector(".sr-only");
+
   if (toggleBtn && toggleBtnIcon && dropDownMenu) {
-    toggleBtn.onclick = function () {
-      dropDownMenu.classList.toggle("open");
-      const isOpen = dropDownMenu.classList.contains("open");
-      toggleBtnIcon.classList = isOpen
+    toggleBtn.addEventListener("click", function () {
+      const isOpen = dropDownMenu.classList.toggle("open");
+      toggleBtnIcon.className = isOpen
         ? "fa-solid fa-xmark"
         : "fa-solid fa-bars";
-    };
+      toggleBtn.setAttribute("aria-expanded", isOpen);
+      if (srOnlySpan) {
+        srOnlySpan.textContent = isOpen ? "Close menu" : "Open menu";
+      }
+    });
   } else {
     console.error("One or more elements not found");
   }

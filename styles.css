@@ -89,6 +89,12 @@ body {
   background-position: center;
 }
 
+.menubar {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
 .navbar .links {
   display: flex;
   gap: var(--spacing-large);
