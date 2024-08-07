@@ -99,6 +99,14 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none;
 }
 
 ul {
@@ -572,13 +580,13 @@ footer {
 /* ------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------ */
 @media (max-width: 576px) {
-:root {
-  --hero-background-image: none;
-}
+  :root {
+    --hero-background-image: none;
+  }
 
-* {
-  color: var(--font-color-black);
-}
+  * {
+    color: var(--font-color-black);
+  }
 
   body {
     background-image: none;
@@ -587,7 +595,6 @@ footer {
   header {
     padding-left: 0;
   }
-
 
   .navbar-logo-container {
     background-image: var(--logo-image-black);
@@ -610,7 +617,6 @@ footer {
   }
 
   #hero .hero-content {
-
     max-width: 100%;
     position: static;
     padding: var(--spacing-medium);
@@ -661,8 +667,8 @@ footer {
   #education h1,
   #skills h1,
   #experience h1,
-  #contact h1{
-  align-items: center;
+  #contact h1 {
+    align-items: center;
   }
 
   .some-button-github {
@@ -672,7 +678,6 @@ footer {
 /* -----------------------------------------------------*/
 /* -----------------------------------------------------*/
 @media (max-width: 480px) {
-
   #hero h1 {
     font-size: 1.8rem;
     text-align: center;
@@ -689,7 +694,7 @@ footer {
   #contact-buttons {
     flex-direction: column;
     gap: var(--spacing-medium);
-  align-items: center;
+    align-items: center;
   }
 
   #info .button {
