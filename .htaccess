@@ -1,6 +1,17 @@
 Options -Indexes
 
+# Estä pääsy suoraan tiedostoon
+
 <Files "Downloads/ICT_Resume_MA2024.pdf">
+Order Deny,Allow
+Deny from all
+</Files>
+
+# Salli pääsy resource_manager.php:hen
+
+<Files "resource_manager.php">
 Order Allow,Deny
 Allow from all
 </Files>
+
+Header set Content-Security-Policy "default-src 'self'; script-src 'self' https://kit.fontawesome.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com; img-src 'self' data: https:; connect-src 'self' https://ka-f.fontawesome.com;"
