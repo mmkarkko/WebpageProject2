@@ -45,15 +45,17 @@ document.addEventListener("DOMContentLoaded", function () {
   var part5 = part1 + String.fromCharCode(part2) + part4;
 
   var emailLink =
-    "<a href='mailto:" + part5 + "' class='button email-button'>Contact Me</a>";
+    "<a href='mailto:" +
+    part5 +
+    "' class='button email-button' aria-label='Contact me via Email'>Contact Me</a>";
   var cvLink =
-    "<a href='/download_cv.php' class='button cv-button' rel='noopener noreferrer'>Download CV</a>";
+    "<a href='/resource_manager.php' class='button cv-button' download rel='noopener noreferrer' aria-label='Download CV'>Download CV</a>";
 
   document.getElementById("contact-buttons").innerHTML =
     emailLink + " " + cvLink;
 });
 
-/* Shows andthe notification */
+/* Shows notification */
 document.addEventListener("DOMContentLoaded", function () {
   const reveal = document.querySelector(".reveal");
   let isHidden = true; // Muutettu true:ksi
@@ -61,10 +63,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function hideNotification() {
     reveal.classList.add("hidden");
     isHidden = true;
+    reveal.setAttribute("aria-hidden", "true");
     if (!reveal.querySelector(".notification-icon")) {
       reveal.insertAdjacentHTML(
         "beforeend",
-        '<div class="notification-icon">!</div>'
+        '<div class="notification-icon" aria-hidden="true">!</div>'
       );
     }
   }
@@ -72,13 +75,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function showNotification() {
     reveal.classList.remove("hidden");
     isHidden = false;
+    reveal.setAttribute("aria-hidden", "false");
     const icon = reveal.querySelector(".notification-icon");
     if (icon) {
       icon.remove();
     }
   }
 
-  // Piilotetaan ilmoitus heti alussa
+  // Hide notification on start
   hideNotification();
 
   // Toggle visibility on click

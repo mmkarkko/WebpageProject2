@@ -1,0 +1,6 @@
+Options -Indexes
+
+<Files "Downloads/ICT_Resume_MA2024.pdf">
+Order Allow,Deny
+Allow from all
+</Files>

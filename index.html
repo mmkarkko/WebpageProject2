@@ -69,12 +69,14 @@
     </header>
     <!-- Notification -->
     <!-- TODO: Korjaa ilmoituksen responsiivisuus -->
-    <div class="reveal">
+    <div class="reveal" role="alert">
       <div class="construction-notice"></div>
-      <div id="construction-text">
+      <div id="construction-text" aria-live="polite">
         My website is a work in progress and will be updated soon.
       </div>
-      <div class="notification-icon" style="display: none">!</div>
+      <div class="notification-icon" style="display: none" aria-hidden="true">
+        !
+      </div>
     </div>
     <main>
       <div class="main-wrapper">
@@ -189,11 +191,15 @@
             <a
               href="https://www.linkedin.com/in/miia-arkko/"
               class="some-button-linkedin"
+              aria-label="Visit my LinkedIn profile"
               ><span class="linked">Linked</span><span class="in">in</span></a
             >
           </li>
           <li>
-            <a href="https://github.com/mmkarkko" class="some-button-github"
+            <a
+              href="https://github.com/mmkarkko"
+              class="some-button-github"
+              aria-label="Visit my GitHub profile"
               >GitHub</a
             >
           </li>
