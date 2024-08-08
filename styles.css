@@ -266,14 +266,12 @@ header {
 }
 
 .info-logo-container {
-  background-image: var(--logo-image-black);
-  height: 45px;
-  min-width: 175px;
-  padding-bottom: 5rem;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   margin-bottom: var(--spacing-medium);
+}
+
+.info-logo {
+  height: 50px;
+  width: auto;
 }
 
 #info a {
