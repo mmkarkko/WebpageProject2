@@ -13,9 +13,9 @@
   /* Images */
   --hero-background-image: url(/Pics/miia-arkko-junior-software-developer-background-3.jpg);
   --hero-background-image-mobile: url(/Pics/miia-arkko-junior-software-developer-mobile.jpg);
-  --background-abstract-image: url(/Pics/abstract-background.jpg); /* TODO Tätä ei varmaan tarvita*/
-  --logo-image-white: url(/Pics/miiaArkko-logo-white.png);
-  --logo-image-black: url(/Pics/miiaArkko-logo-black.png);
+  --background-abstract-image: url(/pics/abstract-background.jpg); /* TODO Tätä ei varmaan tarvita*/
+  --logo-image-white: url(/pics/miiaArkko-logo-white.png);
+  --logo-image-black: url(/pics/miiaArkko-logo-black.png);
 
   /* Layout */
   --navbar-height: 60px;
@@ -48,8 +48,6 @@ body {
   background-position: right top;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 0; /* Lisää tämä */
-  transition: padding-top 0.3s ease; /* Lisää tämä */
 }
 
 .main-wrapper {
@@ -71,30 +69,24 @@ body {
   padding: var(--spacing-large) 4rem 5rem;
 }
 
-#stickyNavbar {
-  position: sticky;
-  top: 0;
-}
-
 .navbar {
   width: 100%;
   height: var(--navbar-height);
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
 }
 
 .navbar-logo-container {
   padding-top: 5px;
-}
-
-.navbar-logo {
-  padding: 5px 0;
-  max-height: 50px;
-  width: auto;
-  display: block;
+  height: 40px;
+  min-width: 200px;
+  background-image: var(--logo-image-white);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .menubar {
@@ -266,12 +258,14 @@ header {
 }
 
 .info-logo-container {
+  background-image: var(--logo-image-black);
+  height: 45px;
+  min-width: 175px;
+  padding-bottom: 5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-bottom: var(--spacing-medium);
-}
-
-.info-logo {
-  height: 50px;
-  width: auto;
 }
 
 #info a {
@@ -606,10 +600,6 @@ footer {
 
   header {
     padding-left: 0;
-  }
-
-  #stickyNavbar {
-    background-color: var(--font-color-white);
   }
 
   .navbar-logo-container {
