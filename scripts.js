@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Creates dropdown menu icons */
   const toggleBtn = document.querySelector(".toggle_btn");
   const toggleBtnIcon = document.querySelector(".toggle_btn i");
-  // Muutettu tämä rivi
   const dropDownMenu = document.querySelector("#mobile-dropdown-menu");
   const srOnlySpan = toggleBtn.querySelector(".sr-only");
+
   if (toggleBtn && toggleBtnIcon && dropDownMenu) {
     toggleBtn.addEventListener("click", function () {
       const isOpen = dropDownMenu.classList.toggle("open");
@@ -41,13 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
   var part3 = String.fromCharCode(part2);
   var part4 = "miiaarkko.fi";
   var part5 = part1 + String.fromCharCode(part2) + part4;
+
   var emailLink =
     "<a href='mailto:" +
     part5 +
     "' class='button email-button' aria-label='Contact me via Email'>Contact Me</a>";
+
   // Muutettu tämä rivi
   var cvLink =
-    "<a href='./Downloads/ICT_Resume_MA2024.pdf' class='button cv-button' download rel='noopener noreferrer' aria-label='Download CV'>Download CV</a>";
+    "<a href='Downloads/ICT_Resume_MA2024.pdf' class='button cv-button' download aria-label='Download CV'>Download CV</a>";
+
   document.getElementById("contact-buttons").innerHTML =
     emailLink + " " + cvLink;
 });

@@ -14,8 +14,8 @@
   --hero-background-image: url(/Pics/miia-arkko-junior-software-developer-background-3.jpg);
   --hero-background-image-mobile: url(/Pics/miia-arkko-junior-software-developer-mobile.jpg);
   --background-abstract-image: url(/pics/abstract-background.jpg); /* TODO Tätä ei varmaan tarvita*/
-  --logo-image-white: url(/pics/miiaArkko-logo-white.png);
-  --logo-image-black: url(/pics/miiaArkko-logo-black.png);
+  --logo-image-white: url(/Pics/miiaArkko-logo-white.png);
+  --logo-image-black: url(/Pics/miiaArkko-logo-black.png);
 
   /* Layout */
   --navbar-height: 60px;
