@@ -82,18 +82,19 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
 .navbar-logo-container {
   padding-top: 5px;
-  height: 40px;
-  min-width: 200px;
-  background-image: var(--logo-image-white);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.navbar-logo {
+  padding: 5px 0;
+  max-height: 50px;
+  width: auto;
+  display: block;
 }
 
 .menubar {
